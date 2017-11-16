@@ -1,0 +1,1037 @@
+@charset "utf-8";
+  
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,
+blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,
+font,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,
+u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,
+caption,tbody,tfoot,thead,tr,th,td	{
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ol,ul {
+	list-style: none;
+}
+
+/* tables still need 'cellspacing="0"' in the markup */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+html,body {
+	background: #000;
+	color: #473e39;
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 12px;
+	line-height: normal;
+}
+
+#start {
+	background: url(images/OGame/pagebgf.jpg) no-repeat scroll 50% 32px;
+	min-width: 794px;
+}
+
+/*###########################
+###		 STUFF
+###########################*/
+a:link {
+	color: #4579a4;
+	font-weight: bold;
+	outline: none;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #619fc8;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover,a:active {
+	color: #619fc8;
+	outline: none;
+}
+
+a:active {
+	position: relative;
+	top: 1px;
+}
+
+p {
+	color: #848484;
+	font-size: 12px;
+	line-height: normal;
+	margin: 15px 0;
+}
+
+a.button,a.button:visited {
+	background: url("images/OGame/button.jpg") repeat-x scroll 0 top #22303F;
+	display: inline-block;
+	padding: 5px 20px 6px;
+	text-decoration: none;
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+	border-bottom: 1px solid #23313F;
+	border-left: 1px solid #2C3E4F;
+	border-right: 1px solid #23313F;
+	border-top: 1px solid #3B4D5F;
+	position: relative;
+	margin: 10px 0;
+	cursor: pointer;
+}
+
+a.button:hover {
+	background-position: 0 -27px;
+}
+
+a.button:active {
+	top: 1px;
+}
+
+a.small.button,a.small.button:visited {
+	font-size: 11px;
+}
+
+a.button,a.button:visited,a.medium.button,a.medium.button:visited {
+	font-size: 13px;
+	font-weight: bold;
+	line-height: 1;
+	text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
+}
+
+a.large.button,a.large.button:visited {
+	font-size: 14px;
+	padding: 8px 14px 9px;
+}
+
+a.blue.button,a.blue.button:visited {
+	background-color: #002341;
+}
+
+a.blue.button:hover {
+	background-color: #0364B9;
+}
+
+#language_selection {
+	color: #9099A3;
+	height: 32px;
+	width: 715px;
+	margin: 10px auto;
+	position: relative;
+	text-align: right;
+	padding-right: 50px;
+}
+
+#header_line {
+	font: 11px Tahoma, Arial, Helvetica, sans-serif;
+	height: 32px;
+	left: 0;
+	padding: 0;
+	position: absolute;
+	text-align: center;
+	top: 0;
+	width: 100%;
+	z-index: 3000;
+}
+
+/*
+############################
+#### 	HEADER
+############################
+*/
+#header {
+	height: 110px;
+	margin: 0 auto;
+	position: relative;
+	width: 715px;
+	padding: 32px 0 0;
+}
+
+h1 {
+	height: 80px;
+	float: left;
+	margin: 30px 0 0;
+	width: 260px;
+}
+
+h1 a {
+	display: block;
+	height: 80px;
+	text-indent: -9999px
+}
+
+h2 {
+	color: #619fc8;
+	font-size: 15px;
+	height: 27px;
+	line-height: 27px;
+	margin: 0 0 5px;
+	text-shadow: -1px -1px 0 #000;
+}
+
+h4 {
+	color: #619FC8;
+}
+
+a#loginBtn {
+	background: url(images/OGame/logon_sprite.png) no-repeat scroll 0 0;
+	color: #FFF;
+	display: block;
+	float: right;
+	font-size: 16px;
+	height: 30px;
+	line-height: 30px;
+	margin: 32px 32px 0 0;
+	width: 102px;
+	text-align: center;
+	text-shadow: -1px -1px 0 #501313;
+}
+/*IE6 double margin*/
+* html a#loginBtn {
+	display: inline;
+}
+
+a#loginBtn:hover {
+	background-position: -102px 0;
+}
+
+#login {
+	background: url(images/OGame/login-mask.gif) no-repeat;
+	height: 300px;
+	opacity: 0;
+	overflow: hidden;
+	display: none;
+	position: absolute;
+	right: 20px;
+	top: 105px;
+	width: 223px;
+}
+
+#pwLostForm,#loginForm {
+	height: 195px;
+	margin: 10px auto 0;
+	width: 190px;
+}
+
+#pwLostForm .black-border,#loginForm .black-border {
+	width: 188px;
+}
+
+#pwLostForm .black-border input,#loginForm .black-border input {
+	width: 188px;
+}
+
+.cookie-txt {
+	background: none repeat scroll 0 0 transparent;
+	color: #848484;
+	font-size: 11px;
+	height: 20px;
+	line-height: 20px;
+	padding: 0;
+}
+
+.checked {
+	color: #619FC8;
+}
+
+#loginForm a {
+	background: url(images/OGame/arrow.gif) no-repeat 0 3px;
+	font-size: 11px;
+	font-weight: normal;
+	height: 15px;
+	line-height: 15px;
+	padding: 0 0 0 11px;
+}
+
+#pwLostForm #formSubmit,#loginForm #loginSubmit {
+	background: url(images/OGame/login-btn.gif) no-repeat;
+	color: #FFF;
+	cursor: pointer;
+	display: block;
+	font-size: 16px;
+	font-weight: bold;
+	height: 30px;
+	line-height: 30px;
+	margin: 10px auto;
+	padding: 0;
+	text-align: center;
+	text-shadow: -1px -1px 0 #501313;
+	width: 187px;
+}
+
+#pwLostForm #formSubmit:hover,#loginForm #loginSubmit:hover {
+	background-position: 0 -30px;
+}
+
+#pwLostForm {
+	margin: 10px 0 0;
+}
+
+#passwordLost,#messageArea,#loadingArea {
+	display: none;
+}
+#messageArea {
+	display: none;
+	opacity: 0;
+}
+
+
+#pwLostForm {
+	float: left;
+}
+
+#pwLostForm #formSubmit {
+	font-size: 14px;
+	margin: 25px 0 10px;
+}
+
+#pwLostInfo {
+	border: 1px solid #2E363E;
+	float: right;
+	margin-bottom: 15px;
+	padding: 15px;
+	width: 160px;
+}
+
+/*
+############################
+#### 	CONTENT
+############################
+*/
+#footerContent,#content {
+	width: 718px;
+	margin: 0 auto;
+}
+
+/*
+############################
+#### 	SUBSCRIBE
+############################
+*/
+#subscribe {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	border: 1px solid #000;
+	display: inline;
+	float: left;
+	height: 359px;
+	margin: 47px 0 7px 7px;
+	width: 220px;
+}
+
+#subscribeForm {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: none repeat scroll 0 0 #22303F;
+	border: 1px solid #2D343C;
+	height: 395px;
+	width: 220px;
+}
+
+#subscribeForm h2 {
+	font-size: 14px;
+	padding: 0 0 0 10px;
+	text-transform: uppercase;
+	text-shadow: 1px 2px #000000;
+	border-bottom: 1px dotted #000;
+}
+
+#subscribeForm .input-wrap {
+	background: #22303f url(images/OGame/subscribe-form-bg.png) repeat-x 0
+		bottom;
+	height: 50px;
+}
+
+#subscribeForm .first {
+	height: 85px;
+}
+
+#subscribeForm .first label a {
+	font-size: 11px;
+}
+
+#subscribeForm label {
+	margin: 2px auto;
+	width: 188px;
+}
+
+#subscribeForm label span {
+	font-size: 11px;
+}
+
+#subscribeForm #submitWrap {
+	background: url(images/OGame/subscribe-bg.jpg) repeat-x;
+}
+
+#subscribeForm #submitWrap label {
+	background: none;
+	color: #848484;
+	float: left font-size 11px;
+	height: 40px;
+	padding: 0;
+	margin: 0 auto;
+	width: 182px;
+}
+
+#stayLoggedIn,#agb {
+	background: 0;
+	border: 0;
+	display: inline;
+	float: left;
+	height: 15px;
+	margin: 0px 5px 15px 10px;
+	width: 15px;
+}
+
+* html #agb {
+	margin: 5px 5px 15px 10px;
+}
+
+#stayLoggedIn {
+	background: 0;
+	margin: 0 5px 0 0;
+}
+
+#regSubmit {
+	background: url("images/OGame/logon_sprite.png") no-repeat scroll 0
+		-30px transparent;
+	color: #FFFFFF;
+	cursor: pointer;
+	display: block;
+	font-size: 20px;
+	height: 54px;
+	line-height: 54px;
+	margin: 0 auto;
+	padding: 0 30px 0 15px;
+	text-align: center;
+	text-shadow: -1px -1px #000000;
+	width: 155px;
+}
+
+#regSubmit:hover {
+	background-position: 0 -84px;
+	text-shadow: -1px -1px #5F5F5F;
+}
+
+input#regSubmit {
+	width: 205px;
+}
+/*
+############################
+####  CONTENT MENU/TABS
+############################
+*/
+#contentWrap {
+	float: left;
+	width: 487px;
+}
+
+#menu {
+	background: url(images/OGame/tab-sprite.gif) no-repeat scroll 15px -33px;
+	height: 33px;
+}
+
+#tabs {
+	border-bottom: 1px solid #131820;
+	display: inline; /*IE6*/
+	float: left;
+	height: 33px;
+	margin: 0 0 0 17px;
+	width: 330px;
+}
+
+#tab4,#tabs li {
+	float: left;
+	height: 33px;
+	width: 110px;
+}
+
+#tab4,#tabs li a {
+	color: #5b6a76;
+	display: block;
+	font-size: 14px;
+	line-height: 33px;
+	text-align: center;
+	text-shadow: -1px -1px 0 #000;
+}
+
+#tab4:hover,#tabs li a.current,#tabs li a:hover {
+	color: #91B0C4;
+	font-weight: bold;
+}
+
+#tabs li.active-tab a {
+	color: #91b0c4;
+}
+
+#tabContent {
+	background: url(images/OGame/tab-content-bg.gif) repeat-y scroll 3px 0;
+	padding: 15px;
+	width: 450px;
+	height: 465px;
+}
+
+#distinctions div#tabContent {
+	height: 403px;
+}
+
+#tabContent .inner-box {
+	-moz-border-radius: 2px;
+	-webkit-border-radius: 2px;
+	background: #1e2b39 url(images/OGame/inner-content-bg.png) repeat-x;
+	border-top: 1px solid #2e363e;
+	border-left: 1px solid #1d2228;
+	border-right: 1px solid #1d2228;
+	border-bottom: 1px solid #000;
+	padding: 0 11px 0;
+}
+
+#contentFooter {
+	background: url(images/OGame/content-footer.gif) no-repeat;
+	height: 33px;
+	width: 487px;
+}
+
+#trailer img {
+	border: 1px solid #314154;
+	margin: 10px 0;
+	width: 422px;
+}
+
+#tabContent .inner-box ul {
+	margin-top: 15px;
+}
+
+#tabContent .inner-box li {
+	background: transparent url("images/OGame/arrow.gif") no-repeat scroll 0
+		3px;
+	color: #848484;
+	margin: 0 0 15px 10px;
+	padding: 0 0 0 15px;
+}
+
+#wallpapers,#screens {
+	margin: 0 auto;
+	width: 415px;
+}
+
+#wallpapers div {
+	float: left;
+	width: 138px;
+}
+
+#wallpapers a,#screens a {
+	background: url(images/OGame/screen-border.png) no-repeat left bottom;
+	float: left;
+	height: 71px;
+	padding: 9px;
+	width: 120px;
+}
+
+#wallpapers a {
+	float: none;
+	display: block;
+}
+
+#wallpapers p {
+	background: url(images/OGame/resolution-bg.gif) no-repeat 4px bottom;
+	min-height: 66px;
+	margin: 0 0 15px;
+	text-align: center;
+	width: 136px;
+}
+
+* html #wallpapers p {
+	height: auto;
+	height: 66px;
+}
+
+#wallpapers p a {
+	font-size: 11px;
+	font-weight: normal;
+	background: none;
+	display: inline;
+	padding: 0;
+}
+
+#start .last {
+	-moz-border-radius-bottomleft: 3px;
+	-moz-border-radius-bottomright: 3px;
+	-webkit-border-radius-bottomleft: 3px;
+	-webkit-border-radius-bottomright: 3px;
+	padding: 0 11px 15px;
+}
+
+embed {
+	margin: 15px 0 0;
+	border: 1px solid #2E363E;
+}
+
+/*
+############################
+#### 	FOOTER
+############################
+*/
+#start {
+	height: 100%;
+	/*margin: 32px auto -140px;  the bottom margin is the negative value of the footer's height 
+	margin: 0px auto -140px; /* the bottom margin is the negative value of the footer's height */
+	min-height: 100%;
+}
+
+#push {
+	height: 140px; /* .push must be the same height as .footer */
+}
+
+#footer {
+	background: #000 url(images/OGame/footer-bg.jpg) no-repeat 50% 0;
+	color: #425463;
+	font-size: 11px;
+	margin: 20px 0 0;
+	height: 120px;
+}
+
+#footer p {
+	color: #425463;
+	font-size: 11px;
+}
+
+/*
+############################
+#### 	Form-Validation - TODO: remove code later and adjust for dojo
+############################
+*/
+/*
+.formError {
+	position:absolute;
+	top:300px;
+	left:300px;
+	padding:0 13px 0 15px;
+	display:block;
+	text-align:left;
+	z-index:5000;
+}
+*/
+#debugMode {
+	background: #000;
+	position: fixed;
+	width: 100%;
+	height: 200px;
+	top: 0;
+	left: 0;
+	overflow: scroll;
+	opacity: 0.8;
+	display: block;
+	padding: 10px;
+	color: #fff;
+	font-size: 14px;
+	z-index: 100000;
+}
+
+.ajaxSubmit {
+	padding: 20px;
+	background: #55ea55;
+	border: 1px solid #999;
+	display: none
+}
+
+.formError .formErrorContent {
+	color: red;
+	width: 250px;
+	font-family: tahoma;
+	font-size: 11px;
+	font-weight: bold;
+	background: #0b3f4f url(../img/tooltip-bg.png) repeat-x;
+	border: 1px solid #00c1fc;
+	box-shadow: 2px 2px 10px #000;
+	-moz-box-shadow: 2px 2px 10px #000;
+	-webkit-box-shadow: 2px 2px 10px #000;
+}
+
+.formError .icon {
+	background: url(../img/warning.gif) no-repeat scroll 5px 2px;
+	padding: 4px 10px 6px 35px;
+}
+
+.greenPopup .formErrorContent {
+	width: 230px;
+}
+
+.blackPopup .formErrorContent {
+	background: #393939;
+	color: #02ACE0;
+}
+
+.formError .formErrorArrow {
+	background: url(../img/tooltip-arrow.gif) no-repeat;
+	height: 15px;
+	left: 1px;
+	position: absolute;
+	top: 5px;
+	width: 15px;
+	z-index: 5001;
+}
+
+.formError .formErrorArrowBottom {
+	top: 0;
+	margin: -6px;
+}
+
+.formError .formErrorArrow div {
+	font-size: 0px;
+	height: 1px;
+	background: #ee0101;
+	margin: 0 auto;
+	line-height: 0px;
+	font-size: 0px;
+	display: block;
+}
+
+.formError .formErrorArrowBottom div {
+	box-shadow: none;
+	-moz-box-shadow: none;
+	-webkit-box-shadow: none;
+}
+
+.blackPopup .formErrorArrow div {
+	background: #393939;
+	color: #FFF;
+}
+
+.agbformError {
+	margin-left: 170px;
+}
+
+#subscribeForm #submitWrap .green {
+	color: #00CC00;
+}
+
+#securePwd {
+	margin-left: 12px;
+	overflow: hidden;
+	position: relative;
+	width: 200px;
+}
+
+.invalid-char {
+	height: 15px;
+}
+
+#validChar {
+	color: #AF1B03;
+	font-weight: bold;
+}
+
+.valid-icon {
+	background: transparent url(../img/valid-icon.gif) no-repeat;
+	display: block;
+	float: left;
+	height: 16px;
+	margin: 0 4px 0 0;
+	width: 16px;
+}
+
+.invalid {
+	background-position: 0 -16px;
+}
+
+#securePwd .securePwdBarBox {
+	float: left;
+	margin: 5px 0 0 0;
+	width: 180px;
+}
+
+#securePwd .securePwdBarBox,#securePwd #securePwdBar { /* has IE-fix */
+	background: transparent url(../img/secure-pwd-bar.gif) no-repeat 0 -13px;
+	height: 13px;
+	font-size: 1px;
+}
+
+#securePwd #securePwdBar {
+	background-position: 0 0;
+}
+
+#securePwd #securePwdBar {
+	float: left;
+}
+
+#pwdWarning {
+	float: right;
+	display: none;
+	margin-top: 32px;
+	padding: 0;
+	position: relative;
+	width: 180px;
+}
+
+#pwdWarning label {
+	font-weight: 700
+}
+
+#securePwd p {
+	margin: 5px 0;
+	color: #619FC8;
+	font-size: 11px;
+	width: 190px;
+}
+
+* html #securePwd p {
+	width: 170px;
+}
+
+.nodisplay {
+	display: none;
+}
+
+#overlay #tabContent {
+	width: 420px;
+}
+
+.black-border {
+	border: 1px solid #000;
+	margin: 0 auto;
+	width: 198px;
+}
+
+label {
+	background: url("images/OGame/arrow.gif") no-repeat scroll 0 3px
+		transparent;
+	color: #619FC8;
+	display: block;
+	font-weight: normal;
+	height: 15px;
+	line-height: 15px;
+	margin: 5px 0;
+	padding: 0 0 0 11px;
+}
+
+.clearfloat {
+	clear: both;
+	height: 0;
+	font-size: 0;
+}
+
+/* always last parameter */
+.clearfix:after {
+	clear: both;
+	content: ".";
+	display: block;
+	height: 0;
+	visibility: hidden;
+}
+
+.clearfix {
+	display: inline-block;
+}
+/* hide from IE Mac \*/
+* html .clearfix {
+	height: 1%;
+}
+
+.clearfix {
+	display: block;
+}
+
+input[type=text],input[type=password],input.text,input.title,textarea,select
+	{
+	color: #30576F;
+	border: 2px solid #8399AF
+}
+
+input[type=text]:focus,input[type=password]:focus,input.text:focus,input.title:focus,
+textarea:focus,select:focus	{
+	border-color: #9EB4CB;
+	color: #0D334C;
+}
+
+input.text,input.title {
+	width: 300px;
+	padding: 5px;
+}
+
+input.title {
+	font-size: 1.5em;
+}
+
+input[type=checkbox],input[type=radio],input.checkbox,input.radio {
+	position: relative;
+	top: .25em;
+	width: 10px;
+}
+
+form.inline {
+	line-height: 3;
+}
+
+form.inline p {
+	margin-bottom: 0;
+}
+
+input {
+	background: #8d9aa7 url(images/OGame/input-bg.gif) repeat-x;
+	border: 2px solid #9eb4cb;
+	color: #0D334C;
+	height: 16px;
+	padding: 0 5px;
+	width: 198px;
+}
+
+input[type=submit]:focus {
+	outline: none;
+}
+
+.startsHidden {
+	visibility: hidden;
+}
+
+.js_warning_hp_inner {
+	width: 400px;
+	margin-top: -2em;
+	margin-left: -200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border: 5px solid red;
+	font-size: 2em;
+	vertical-align: middle;
+	text-align: center;
+	background-color: white;
+	color: red;
+}
+
+input#regSubmit {
+	border: 0px;
+	width: 198px;
+}
+
+input#loginSubmit {
+	border: 0px;
+	width: 187px;
+}
+
+.claro .dijitSelect {
+	border: 1px solid black;
+	background-color: #274650;
+	border-collapse: separate;
+	color: #C2C2C2;
+	font-size: 11px;
+	overflow: hidden;
+}
+
+.dijitSelect {
+	margin: 0px;
+}
+
+.claro .dijitSelect .dijitButtonText {
+	padding: 0px;
+}
+
+.claro .dijitselectmenu .dijitmenuitem td {
+	border: none;
+}
+
+.claro .dijitselect .dijitarrowbutton .dijitarrowbuttoninner {
+	border: none;
+}
+
+.claro .dijitMenuTable {
+	background-color: black;
+	color: #C2C2C2;
+	font-size: 11px;
+	overflow: hidden;
+}
+
+.claro .dijitMenuItem {
+	color: #c7c7c7;
+}
+
+.claro .dijitSelect .dijitButtonContents {
+	border-style: none;
+}
+
+.claro .dijitSelect .dijitArrowButton {
+	padding: 0;
+	border: 0px;
+	border-top: none;
+	background-color: transparent;
+	background-image: none;
+}
+
+.claro .dijitSelectFocused .dijitArrowButton {
+	/*background-color: #7dbefa;*/
+	background-position: 0 -177px;
+	border: none;
+	padding: 0 1px;
+}
+
+.formError {
+	border-color: orange !important;
+}
+
+img.password_strength {
+	height: 7px;
+	margin-left: 11px;
+}
+
+img.password_strength_weak {
+	width: 50px;
+	background: url(images/password_strength.png) 0 0;
+}
+
+img.password_strength_good {
+	width: 100px;
+	background: url(images/password_strength.png) 0 0;
+}
+
+img.password_strength_strong {
+	width: 150px;
+	background: url(images/password_strength.png) 0 0;
+}
+
+img.password_strength_very_strong {
+	width: 198px;
+	background: url(images/password_strength.png) 0 0;
+}
+
+/* country flags */
+.flag_arabic { background: url(images/flag_sprite.png) 0 0 !important; height: 12px; width: 24px; }
+.flag_balkan { background: url(images/flag_sprite.png) 0 -12px !important; height: 16px; width: 24px; }
+.flag_bulgarian { background: url(images/flag_sprite.png) 0 -28px !important; height: 15px; width: 24px; }
+.flag_brazilian { background: url(images/flag_sprite.png) 0 -43px !important; height: 17px; width: 24px; }
+.flag_chinese { background: url(images/flag_sprite.png) 0 -60px !important; height: 14px; width: 24px; }
+.flag_czech { background: url(images/flag_sprite.png) 0 -74px !important; height: 16px; width: 24px; }
+.flag_danish { background: url(images/flag_sprite.png) 0 -90px !important; height: 15px; width: 24px; }
+.flag_dutch { background: url(images/flag_sprite.png) 0 -105px !important; height: 14px; width: 24px; }
+.flag_english { background: url(images/flag_sprite.png) 0 -119px !important; height: 15px; width: 24px; }
+.flag_spanish { background: url(images/flag_sprite.png) 0 -134px !important; height: 15px; width: 24px; }
+.flag_finnish { background: url(images/flag_sprite.png) 0 -149px !important; height: 18px; width: 24px; }
+.flag_french { background: url(images/flag_sprite.png) 0 -167px !important; height: 14px; width: 24px; }
+.flag_german { background: url(images/flag_sprite.png) 0 -181px !important; height: 15px; width: 24px; }
+.flag_greek { background: url(images/flag_sprite.png) 0 -196px !important; height: 16px; width: 24px; }
+.flag_croatian { background: url(images/flag_sprite.png) 0 -212px !important; height: 18px; width: 24px; }
+.flag_hungarian { background: url(images/flag_sprite.png) 0 -230px !important; height: 16px; width: 24px; }
+.flag_italian { background: url(images/flag_sprite.png) 0 -246px !important; height: 15px; width: 24px; }
+.flag_japan { background: url(images/flag_sprite.png) 0 -261px !important; height: 18px; width: 24px; }
+.flag_korean { background: url(images/flag_sprite.png) 0 -279px !important; height: 15px; width: 24px; }
+.flag_lithuanian { background: url(images/flag_sprite.png) 0 -294px !important; height: 18px; width: 24px; }
+.flag_latvian { background: url(images/flag_sprite.png) 0 -312px !important; height: 12px; width: 24px; }
+.flag_norwegian { background: url(images/flag_sprite.png) 0 -324px !important; height: 16px; width: 24px; }
+.flag_polish { background: url(images/flag_sprite.png) 0 -340px !important; height: 15px; width: 24px; }
+.flag_portugues { background: url(images/flag_sprite.png) 0 -355px !important; height: 15px; width: 24px; }
+.flag_romanian { background: url(images/flag_sprite.png) 0 -370px !important; height: 18px; width: 24px; }
+.flag_russian { background: url(images/flag_sprite.png) 0 -388px !important; height: 16px; width: 24px; }
+.flag_serbian { background: url(images/flag_sprite.png) 0 -404px !important; height: 16px; width: 24px; }
+.flag_slovenian { background: url(images/flag_sprite.png) 0 -420px !important; height: 16px; width: 24px; }
+.flag_slovak { background: url(images/flag_sprite.png) 0 -436px !important; height: 14px; width: 24px; }
+.flag_swedish { background: url(images/flag_sprite.png) 0 -450px !important; height: 18px; width: 24px; }
+.flag_turkish { background: url(images/flag_sprite.png) 0 -468px !important; height: 15px; width: 24px; }
+.flag_taiwan { background: url(images/flag_sprite.png) 0 -483px !important; height: 16px; width: 24px; }

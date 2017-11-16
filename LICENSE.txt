@@ -1,0 +1,64 @@
+--------------------------------------------------------------------
+-----------------   Galaxytool Lizenzvereinbarung   ----------------
+--------------------------------------------------------------------
+---------   Copyright (c) 2005-2013 by Christian Lehmann   ---------
+----------------------   www.galaxytool.eu   -----------------------
+--------------------------------------------------------------------
+
+Diese Lizenzvereinbarung gilt sowohl für das Galaxytool, als auch die
+Galaxytool toolbar.(im Folgenden: Galaxytool)
+
+1. Das Galaxytool ist keine Open Source Software. Änderungen am Code
+sind nicht gestattet.
+
+2. Es ist nicht gestattet, das Galaxytool oder Abwandlungen
+weiterzuverbreiten. Das Galaxytool darf ausschließlich über
+www.galaxytool.eu bezogen werden.
+
+3. Es dürfen maximal 10 Galaxytools gehostet werden. Das Hosten
+darüber hinausgehender Galaxytools bedarf der ausdrücklichen Genehmigung.
+
+4. Der automatisierte Betrieb von Galaxytool ist strikt untersagt. Die
+Erweiterung von Galaxytool durch automatisierte Mechanismen ist nicht
+gestattet.
+
+5. Galaxytool ist für den privaten Gebrauch bestimmt. Jede kommerzielle
+Verwendung - sei es durch Verkauf von Erweiterungen oder
+Modifikationen, werbegestütztes Hosting von Tools oder die
+entgeltliche Weitergabe von mit Galaxytool gesammelten Daten ist
+untersagt.
+
+6. Ansprüche, welche aus einem Verstoss gegen Nr.4 und 5 dieser
+Lizenzvereinbarung resultieren, sind an die Gameforge AG, Karlsruhe,
+Deutschland abgetreten und werden durch diese gerichtlich geltend
+gemacht.
+
+----------------------
+
+
+--------------------------------------------------------------------
+-------------------   Galaxytool Licence-Agreement   ---------------
+--------------------------------------------------------------------
+---------   Copyright (c) 2005-2013 by Christian Lehmann   ---------
+----------------------   www.galaxytool.eu   -----------------------
+--------------------------------------------------------------------
+
+This licence agreement does apply to Galaxytool itself as well as the
+Galaxytool toolbar (both below: Galaxytool)
+
+1. Galaxytool is not open source. Code changes are prohibited.
+
+2. It is strictly forbidden to distribute Galaxytool or modified
+versions. Galaxytool shall only be obtained from www.galaxytool.eu.
+
+3. At most 10 Galaxytools may be hosted per individual. Hosting of
+more Galaxytools requires explicit permission.
+
+4. It is strictly prohibited to automate Galaxytool in any way.
+
+5. Galaxytool is for private use only. Commercial use, no matter in
+which way (e.g. selling of expansions or modifications, advertised
+hosting, selling of data acquired by Galaxytool) is strictly prohibited.
+
+6. Claims related to No.4 or 5 of this licence agreement are
+transfered to Gameforge AG, Germany and will be enforced by law.
