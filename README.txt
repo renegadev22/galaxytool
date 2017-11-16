@@ -36,6 +36,7 @@ Everything is created automatically during installation - no need to edit any fi
 After installation
 
 After the installation you have to delete the install.php and the update.php! Then you can logon with the account data created during installation.
+
 				************
 Important for those hosted on a Linux Server
 				************
